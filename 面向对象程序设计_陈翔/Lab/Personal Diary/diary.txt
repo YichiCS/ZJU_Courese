@@ -1,0 +1,14 @@
+2023-04-01
+Hello.
+2023-04-03
+My name is Yichi Zhang. 
+2023-04-05
+I am an undergradute in ZJU.
+2023-04-06
+My major is Information Engineering.
+2023-04-07
+I am interested in Machine Learning,
+which sounds really cool.
+2023-04-11
+I have create my Homepage.
+yichics@github.io

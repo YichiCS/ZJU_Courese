@@ -1,0 +1,68 @@
+Do you want to customize the game or play according to preset parameters?
+1. Customize
+2. Preset parameters
+
+>>  1
+
+Please enter a custom map size, up to 8*8.
+Example: 6 6
+
+>>  3 
+    3
+Please enter where the brave begin.
+Example: 0 0
+
+>>  0 0
+
+Please enter where the princess is.
+Example: 5 5
+
+>>  4 4
+
+Map is generating
+Map has generated
+2 0 1 
+0 4 0 
+0 0 3 
+
+Before the Game begin, what's your name, my brave hero?
+Enter your name:
+
+>>  Alice
+
+Welcome Alice. Let's start our adventure now :D
+Welcome to (0, 0),Alice. Now, you have the following choices: go south go east.
+Enter your commond:
+>>  go south 
+
+Welcome to (1, 0),Alice. Now, you have the following choices: go south go north go east.
+Enter your commond:
+>>  go south 
+
+Welcome to (2, 0),Alice. Now, you have the following choices: go north go east.
+Enter your commond:
+>>  go east 
+
+Welcome to (2, 1),Alice. Now, you have the following choices: go north go east go west.
+Enter your commond:
+>>  go east
+
+Alice, you have found the princess, escort her back :D
+
+Welcome to (2, 2),Alice. Now, you have the following choices: go north go west.
+Enter your commond:
+>>  go west 
+
+Welcome to (2, 1),Alice. Now, you have the following choices: go north go east go west.
+Enter your commond:
+>>  go west
+
+Welcome to (2, 0),Alice. Now, you have the following choices: go north go east.
+Enter your commond:
+>>  go north 
+
+Welcome to (1, 0),Alice. Now, you have the following choices: go south go north go east.
+Enter your commond:
+>>  go north 
+
+Good job, Alice, you have successfully completed the task of rescuing the princess, go to the king to get the reward!
