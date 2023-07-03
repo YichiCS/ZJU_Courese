@@ -1,0 +1,35 @@
+* CMOS nand
+.SUBCKT NAND vdda gnda  A B out
+MPM2 out A vdda vdda p18 W=4u L=180n m=1
+MPM1 out B vdda vdda p18 W=4u L=180n m=1
+MNM1 net01 B gnda gnda n18 W=2u L=180n m=1
+MNM2 out A net01 gnda n18 W=2u L=180n m=1
+.ENDS
+* CMOS inverter
+.subckt INV vdda gnda  in out 
+MPM2 out in vdda vdda p18 W=4u L=180n m=1
+MNM1 out in gnda gnda n18 W=2u L=180n m=1
+.ends
+
+
+* latch comparator
+* if vip>vin then voutp=HIGH voutn=LOW
+* if vip<vin then voutp=LOW  voutn=HIGH
+.SUBCKT comparator vdda gnda clk vip vin voutp voutn
+xa1 vdda gnda net01  voutp  / INV
+xa2 vdda gnda net02  voutn  / INV
+MM1 net03 vip   gnda gnda n18 W=20u L=180n m=1
+MM2 net03 net04 gnda gnda n18 W=20u L=180n m=1
+MM3 net04 net03 gnda gnda n18 W=20u L=180n m=1
+MM4 net04 vin   gnda gnda n18 W=20u L=180n m=1
+
+MM5 net01 clk net03 gnda n18 W=30u L=180n m=1
+MM6 net02 clk net04 gnda n18 W=30u L=180n m=1
+
+MM7 net01 clk   vdda vdda p18 W=60u L=180n m=1
+MM8 net01 net02 vdda vdda p18 W=60u L=180n m=1
+MM9 net02 net01 vdda vdda p18 W=60u L=180n m=1
+MM10 net02 clk  vdda vdda p18 W=60u L=180n m=1
+.ENDS
+
+

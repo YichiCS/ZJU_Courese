@@ -1,0 +1,16 @@
+.SUBCKT mdac vdd vss gnd in1 in2 in3 in4 in5 in6 in7 out outt in
+
+XI1 gnd in outt vdd vss / OPAMP
+R0 in outt 100k
+Ra in1 in 1000k
+Rb in2 in 1000k
+Rc in3 in 1000k
+Rd in4 in 1000k
+Re in5 in 1000k
+Rf in6 in 1000k
+Ri in7 in 62k
+
+XI2 outt vin2 out vdd vss / OPAMP
+R2f out vin2 150k
+R21 vin2 gnd 100k
+.ENDS

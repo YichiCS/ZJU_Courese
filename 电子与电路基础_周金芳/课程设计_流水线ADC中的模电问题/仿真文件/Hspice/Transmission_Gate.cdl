@@ -1,0 +1,12 @@
+* CMOS inverter
+.subckt INV vdda gnda  in out 
+MPM2 out in vdda vdda p18 W=4u L=180n m=1
+MNM1 out in gnda gnda n18 W=2u L=180n m=1
+.ends
+
+* CMOS switch
+.subckt SWITCHb vdda gnda  s  in out 
+x1 vdda gnda  s s_inv / INV
+m1 out s     in gnda n18 W=2u L=180n m=1
+m2 out s_inv in vdda p18 W=4u L=180n m=1
+.ends

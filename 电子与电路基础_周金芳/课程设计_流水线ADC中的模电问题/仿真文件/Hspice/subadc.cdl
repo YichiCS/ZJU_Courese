@@ -1,0 +1,24 @@
+.SUBCKT subadc vdd vss gnd vip out1 out2 out3 out4 out5 out6 clk
+
+R1 vss ref1 11k
+R2 ref1 ref2 2k
+R3 ref2 ref3 2k
+R4 ref3 ref4 2k
+R5 ref4 ref5 2k
+R6 ref5 ref6 2k
+R7 ref6 vdd 11k
+
+C1 ref1 gnd 1n
+C2 ref2 gnd 1n
+C3 ref3 gnd 1n
+C4 ref4 gnd 1n
+C5 ref5 gnd 1n
+C6 ref6 gnd 1n
+
+XC1 vdd vss vip ref1 out1 clk / comparator
+XC2 vdd vss vip ref2 out2 clk / comparator
+XC3 vdd vss vip ref3 out3 clk / comparator
+XC4 vdd vss vip ref4 out4 clk / comparator
+XC5 vdd vss vip ref5 out5 clk / comparator
+XC6 vdd vss vip ref6 out6 clk / comparator
+.ENDS
